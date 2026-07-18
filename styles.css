@@ -1,0 +1,225 @@
+:root {
+  --pp-bg: #0f172a;
+  --pp-surface: #0b1324;
+  --pp-card: #111827;
+  --pp-border: #1f2937;
+  --pp-accent: #60a5fa;
+  --pp-text: #e5e7eb;
+  --pp-muted: #9ca3af;
+  --pp-green: #22c55e;
+  --pp-yellow: #eab308;
+  --pp-red: #ef4444;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.pp-wrapper {
+  position: fixed;
+  z-index: 2147483646;
+  width: 360px;
+  background: var(--pp-card);
+  color: var(--pp-text);
+  border: 1px solid var(--pp-border);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  user-select: none;
+}
+
+.pp-header {
+  background: linear-gradient(135deg, #2563eb, #10b981);
+  padding: 12px 14px;
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+}
+.pp-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+.pp-sub {
+  font-size: 12px;
+  color: #e0f2fe;
+}
+
+.pp-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pp-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pp-score {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.pp-label {
+  font-size: 12px;
+  color: var(--pp-muted);
+}
+.pp-meter {
+  width: 100%;
+  height: 10px;
+  background: #0f172a;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.pp-meter-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+.bg-green { background: var(--pp-green); }
+.bg-yellow { background: var(--pp-yellow); }
+.bg-red { background: var(--pp-red); }
+.pp-score-text {
+  font-size: 11px;
+  color: var(--pp-muted);
+}
+
+.pp-section {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--pp-border);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pp-textarea {
+  width: 100%;
+  min-height: 120px;
+  background: #0b1020;
+  color: #e5e7eb;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 13px;
+  resize: vertical;
+}
+.pp-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.pp-btn {
+  background: linear-gradient(135deg, #2563eb, #10b981);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+.pp-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.pp-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+.pp-secondary {
+  background: transparent;
+  border: 1px solid var(--pp-border);
+  color: var(--pp-text);
+  padding: 7px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.pp-hint {
+  font-size: 12px;
+  color: var(--pp-muted);
+}
+
+.pp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.pp-card {
+  border: 1px solid var(--pp-border);
+  border-radius: 10px;
+  padding: 8px;
+  background: #0f162a;
+  min-height: 120px;
+}
+.pp-list {
+  margin: 6px 0 0;
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+.pp-empty {
+  color: var(--pp-muted);
+  font-size: 12px;
+}
+
+.pp-msg,
+.pp-msg-error {
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(96, 165, 250, 0.1);
+  color: #bfdbfe;
+}
+.pp-msg-error {
+  background: rgba(239, 68, 68, 0.08);
+  color: #fecdd3;
+}
+
+/* Shared page styles (popup/options) */
+.pp-page {
+  background: #0b1020;
+  color: #e5e7eb;
+  min-width: 320px;
+  min-height: 200px;
+}
+.pp-shell {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pp-heading {
+  margin: 0;
+  font-size: 20px;
+}
+.pp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pp-field input,
+.pp-field select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+.pp-copy {
+  margin: 0;
+  color: var(--pp-muted);
+}
+.pp-status {
+  font-weight: 600;
+}
+.popup .pp-card {
+  min-height: unset;
+}

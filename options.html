@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PromptPilot Settings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      padding: 20px;
+      max-width: 520px;
+      margin: auto;
+    }
+    label { display: block; margin-top: 8px; font-weight: 600; }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      margin-bottom: 14px;
+      border-radius: 6px;
+      border: none;
+      background: #111a33;
+      color: white;
+    }
+    button {
+      padding: 10px;
+      width: 100%;
+      background: #22c55e;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+<h2>PromptPilot Settings</h2>
+
+<label>API Key</label>
+<input id="apiKey" type="password" placeholder="sk-..." />
+
+<label>Endpoint</label>
+<input id="endpoint" type="text" placeholder="https://api.openai.com/v1/chat/completions" />
+
+<button id="saveBtn">Save Settings</button>
+
+<script src="options.js"></script>
+
+</body>
+</html>
